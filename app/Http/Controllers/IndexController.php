@@ -16,7 +16,7 @@ class IndexController extends Controller
         $books = Book::latest()
             ->whereLike('title', "%{$request->search}%")
             ->orWhereLike('author', "%{$request->search}%")
-            ->paginate(3)
+            ->paginate(10)
             ->withQueryString();
 
         return view('pages.index', compact('books'));
