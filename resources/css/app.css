@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source "../**/*.blade.php";
@@ -8,7 +10,7 @@
 
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 @utility container {
@@ -35,4 +37,53 @@
     @variant 2xl {
         max-width: 1536px;
     }
+}
+
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    z-index: 99999;
+    transition: 0.2s ease;
+    border-radius: 10px;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.overlay {
+    /* background-color: blue; */
+    position: fixed;
+    inset: 0;
+    z-index: 99998;
+    backdrop-filter: blur(5px);
+    background-color: rgb(0, 0, 0, 0.1);
+    transition: 0.4s ease;
+
+}
+
+.modal .modal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px;
+}
+
+.modal .modal-head h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.modal .modal-body {
+    padding: 65px 0;
+}
+
+.modal .modal-body .large-icon {
+    font-size: 60px;
+    margin-bottom: 25px;
+}
+
+[x-cloak] {
+    display: none !important;
 }
