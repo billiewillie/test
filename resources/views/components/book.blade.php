@@ -1,9 +1,9 @@
 <article class="flex flex-col gap-2">
     <div class="w-full aspect-[2/3] overflow-hidden flex items-start">
         <img
-            src="{{$book->image}}"
+            src="{{asset('storage/' . '$book->image)}}"
             class="object-cover w-full h-full"
-            alt="Harry Potter">
+            alt="{{$book->title}}">
     </div>
     <header>
         <h3 class="font-semibold text-base">{{$book->title}}</h3>
