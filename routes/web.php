@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\CreateController;
 use App\Http\Controllers\DestroyController;
+use App\Http\Controllers\EditController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\StoreController;
-use App\Http\Controllers\EditController;
 use App\Http\Controllers\UpdateController;
 use Illuminate\Support\Facades\Route;
 
