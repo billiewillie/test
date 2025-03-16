@@ -14,6 +14,11 @@ class BookSeeder extends Seeder
     {
         Book::truncate();
 
-        Book::factory()->count(20)->create();
+        collect()->range(1, 12)->each(fn (int $index) => Book::create([
+            'title' => ucfirst(fake()->words(rand(1, 3), true)),
+            'author' => fake()->name(),
+            'year' => fake()->numberBetween(1900, 2020),
+            'image' => 'images/cover-'.$index.'.jpg',
+        ]));
     }
 }

@@ -16,11 +16,6 @@ class BookFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-            'title' => ucfirst(fake()->words(rand(1, 3), true)),
-            'author' => fake()->name(),
-            'year' => fake()->numberBetween(1900, 2020),
-            'image' => 'potter.jpg',
-        ];
+        return [];
     }
 }
