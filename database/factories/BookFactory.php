@@ -20,7 +20,7 @@ class BookFactory extends Factory
             'title' => ucfirst(fake()->words(rand(1, 3), true)),
             'author' => fake()->name(),
             'year' => fake()->numberBetween(1900, 2020),
-            'image' => 'images/potter.jpg',
+            'image' => 'potter.jpg',
         ];
     }
 }
