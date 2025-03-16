@@ -1,7 +1,7 @@
 <article class="flex flex-col gap-2">
     <div class="w-full aspect-[2/3] overflow-hidden flex items-start">
         <img
-            src="storage/{{$book->image}}"
+            src="{{asset('storage') . '/' . $book->image}}"
             class="object-cover w-full h-full"
             alt="{{$book->title}}">
     </div>
