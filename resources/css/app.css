@@ -39,6 +39,10 @@
     }
 }
 
+nav > div:last-child > div:last-child > span > span {
+    display: flex;
+}
+
 .modal {
     position: fixed;
     left: 50%;
